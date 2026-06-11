@@ -38,6 +38,9 @@ Demostrar cómo un atacante posicionado en la misma red puede interceptar consul
 | Kali Atacante | eth0.10 | VLAN tag 802.1Q | 10 | DHCP (`192.168.10.X`) |
 | Kali Víctima | eth0 | Access | 10 | DHCP (`192.168.10.Y`) |
 
+### Imagen topologia
+![Topología](Topologia/Topologia.png)
+
 ***
 
 ## 🎯 Objetivo del Script
@@ -131,15 +134,6 @@ curl http://itla.edu.do
 
 ***
 
-## 📸 Capturas de Pantalla
-
-> 📌 Agregar capturas de:
-> - Terminal del atacante mostrando ARP Poison activo y DNS interceptado
-> - `nslookup itla.edu.do` en la víctima resolviendo a IP de Kali
-> - Navegador de la víctima mostrando la página falsa de ITLA
-
-***
-
 ## 🛡️ Contramedidas y Mitigación
 
 > 📄 Ver comandos completos en: [`Mitigacion/SW2.ios`](Mitigacion/SW2.ios)
@@ -155,6 +149,6 @@ curl http://itla.edu.do
 
 <div align="center">
 
-**EGALDITO_LAB** -  Ciberseguridad Ofensiva en Redes -  2024
+**EGALDITO_LAB** -  Ciberseguridad Ofensiva en Redes -  2025-0704
 
 </div>
