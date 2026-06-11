@@ -1,0 +1,19 @@
+en
+conf t
+hostname R1
+
+!!!!!!!!!! Pool dhcp local
+ip dhcp pool RED_LOCAL
+ network 192.168.10.0 255.255.255.0
+ default-router 192.168.10.1
+ dns-server 192.168.10.1
+ exit
+
+!!! Servidor dns falso
+ip dns server
+
+!!! Interfaz gw
+interface GigabitEthernet0/0
+ ip address 192.168.10.1 255.255.255.0
+ no shutdown
+ exit

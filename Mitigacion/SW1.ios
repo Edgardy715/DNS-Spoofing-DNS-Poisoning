@@ -1,0 +1,25 @@
+!!!!!!!!!!! SW1 (DHCP Snooping + Dynamic ARP Inspection)
+
+en
+conf t
+
+! Habilitar DHCP Snooping en VLAN 10
+ip dhcp snooping
+ip dhcp snooping vlan 10
+
+! Puerto hacia R1 = trusted
+int g0/0
+ ip dhcp snooping trust
+ ip arp inspection trust
+exit
+
+! Puerto del atacante = untrusted
+int g0/1
+ no ip dhcp snooping trust
+exit
+
+! Habilitar DAI en VLAN 10
+ip arp inspection vlan 10
+
+end
+wr

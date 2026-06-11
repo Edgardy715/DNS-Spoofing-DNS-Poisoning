@@ -1,0 +1,29 @@
+en
+configure terminal
+hostname SW1
+vtp domain EGALDITO_LAB
+vtp mode server
+
+!!!! Vlan para hacer el ataque vtp
+vlan 10
+ name RED_LOCAL
+ exit
+
+!!! Interfaz hacia el sw2
+interface GigabitEthernet0/0
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ exit
+
+!!! Interfaz hacia el R1
+interface GigabitEthernet0/1
+ switchport mode access
+ switchport access vlan 10
+ exit
+
+!!! Interfaz hacia maquina victima
+interface GigabitEthernet0/2
+ switchport mode access
+ switchport access vlan 10
+ spanning-tree portfast
+ exit

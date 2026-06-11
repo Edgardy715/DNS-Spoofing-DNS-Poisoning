@@ -1,0 +1,16 @@
+en
+configure terminal
+hostname SW2
+vtp domain EGALDITO_LAB
+vtp mode client
+
+!!! Interfaz hacia SW1
+interface GigabitEthernet0/0
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ exit
+
+!!! Interfaz hacia maquina atacante
+interface GigabitEthernet0/1
+ switchport mode dynamic auto
+ exit
