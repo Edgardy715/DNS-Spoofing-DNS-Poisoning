@@ -136,7 +136,7 @@ curl http://itla.edu.do
 
 ## 🛡️ Contramedidas y Mitigación
 
-> 📄 Ver comandos completos en: [`Mitigacion/SW2.ios`](Mitigacion/SW2.ios)
+> 📄 Ver comandos completos en: [`Mitigacion/SW1.ios`](Mitigacion/SW1.ios)
 
 | # | Medida | Dónde | Efecto |
 |:---:|:---|:---:|:---|
